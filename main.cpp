@@ -1,28 +1,36 @@
-#include <iostream>
-/** Gearoid
- *  Hanrahan
- *  Lab 1
- *
- *  Temperature Converter
- *
+/** Factorial Calculator
+ *  Gearoid Hanrahan
+ *  C00108964
+ * 25-09-2017
  */
+
+
+#include <iostream>
 
 using namespace std;
 
 int main()
-{
-    double tf, tc;
+{   /** Variable Declaration */
+    int num, i; int fact = 1;
 
-    /** Cout can be used like printf*/
-    cout <<"n"<< "Enter the Temp in Celcius:"<< endl;
-    /** can think of cin as a scanf */
-    cin  >> tc;
+    cout << "Enter a number for n:"<<endl;
+    cin >> num;
 
-    /** calculation */
-    tf=(1.8*tc)+32;
+    /**While Loop ensures number is is positive */
+    while (num<0)
+    {
+        cout<< "Enter a number >0"<<endl;
+        cin>> num;
+    }
 
-    /** Shows output */
-    cout <<"\n"<< "Temperature in Fahrenheit is:"<<tf<<endl;
+    //For loop
+    for(i=num;i>0;i--)
+    {
+        fact = fact* i;
+    }
+
+    /**Cout Displays answer on screen */
+    cout<< "Factorial is : "<< fact;
 
     return 0;
 }
